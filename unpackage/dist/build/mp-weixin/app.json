@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/launch/launch",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/newOrder/newOrder",
+    "pages/orderList/orderList",
+    "pages/dataStatistics/dataStatistics",
+    "pages/todayProductPrice/todayProductPrice"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}

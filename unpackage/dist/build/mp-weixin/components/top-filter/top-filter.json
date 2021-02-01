@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "uni-list": "/components/uni-list/uni-list",
+    "uni-list-item": "/components/uni-list-item/uni-list-item",
+    "uni-calendar": "/components/uni-calendar/uni-calendar",
+    "uni-drawer": "/components/uni-drawer/uni-drawer"
+  }
+}

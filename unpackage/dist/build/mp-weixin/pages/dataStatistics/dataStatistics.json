@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "top-bar": "/components/top-bar/top-bar",
+    "uni-drawer": "/components/uni-drawer/uni-drawer"
+  }
+}

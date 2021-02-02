@@ -20,7 +20,7 @@
 			</view>
 		</view>
 		<view class="statistics">
-			<view class="statistics-module" @click="toNaviget('1')">
+			<view class="statistics-module" @click="toNaviget('1',param.startTime,param.endTime)">
 				<view class="dataImg">
 					<image src="../../static/orderTotal.png"></image>
 				</view>
@@ -29,7 +29,7 @@
 					<view class="subtitle">订单总数</view>
 				</view>
 			</view>
-			<view class="statistics-module" @click="toNaviget('2')">
+			<view class="statistics-module" @click="toNaviget('2',param.startTime,param.endTime)">
 				<view class="dataImg">
 					<image src="../../static/noReply.png"></image>
 				</view>
@@ -38,7 +38,7 @@
 					<view class="subtitle">未回物流</view>
 				</view>
 			</view>
-			<view class="statistics-module" @click="toNaviget('3')">
+			<view class="statistics-module" @click="toNaviget('3',param.startTime,param.endTime)">
 				<view class="dataImg">
 					<image src="../../static/reply.png"></image>
 				</view>
@@ -252,9 +252,9 @@
 				day = day > 9 ? day : '0' + day;
 				return `${year}-${month}-${day}`;
 			},
-			toNaviget(id) {
+			toNaviget(id,startTime,endTime) {
 				uni.navigateTo({
-					url: '../orderList/orderList?id=' + id
+					url: '../orderList/orderList?id=' + id + '&startTime=' + startTime + '&endTime=' + endTime
 				})
 			}
 		}

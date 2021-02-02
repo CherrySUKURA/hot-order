@@ -99,10 +99,16 @@
 			uniPopupDialog
 		},
 		onLoad(option){
-			if(option.id){
+			if(option.id || option.startTime || option.endTime){
 				this.OrderParam.buttonId = option.id
+				this.OrderParam.startTime = option.startTime
+				this.OrderParam.endTime = option.endTime
+				this.filterData[1].title = option.startTime
+				this.filterData[2].title = option.endTime
 			}else{
 				this.OrderParam.buttonId = 1
+				this.OrderParam.startTime = ""
+				this.OrderParam.endTime = ""
 			}
 		},
 		onShow(){

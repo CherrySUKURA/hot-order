@@ -67,7 +67,7 @@
 									 <text>
 										{{orderMessage.parcelNo === null ? '暂无物流' : orderMessage.parcelNo}}
 									</text>
-									<button  @click="copy(orderMessage.parcelNo === null ? '暂无物流' : orderMessage.parcelNo)" class="copyBtn">复制</button>
+									<button @click="copy(orderMessage.parcelNo === null ? '暂无物流' : orderMessage.parcelNo)" class="copyBtn">复制</button>
 								</view>
 							</view>
 						</view>
@@ -214,8 +214,12 @@
 			},
 			change(arr){
 				this.OrderParam.dealerId = arr[0].value;
-				this.OrderParam.startTime = arr[1].value;
-				this.OrderParam.endTime = arr[2].value;
+				if(arr[1].value){
+					this.OrderParam.startTime = arr[1].value;
+				}
+				if(arr[2].value){
+					this.OrderParam.endTime = arr[2].value;
+				}
 				this.HttpRequestOrderInfo(this.OrderParam,'filter')
 			},
 			search(){

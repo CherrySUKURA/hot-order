@@ -196,19 +196,15 @@
 			timerRuler(startDate,endDate){
 				const timerArr1 = startDate.split('-')
 				const timerArr2 = endDate.split('-')
-				if(startDate === endDate){
-					uni.showToast({
-						title: '开始时间与结束时间不能相同',
-						icon: 'none'
-					})
-					return false
-				}
+				// if(startDate === endDate){
+				// 	uni.showToast({
+				// 		title: '开始时间与结束时间不能相同',
+				// 		icon: 'none'
+				// 	})
+				// 	return false
+				// }
 				let every =  timerArr2.every( (item,index,array) => {
-					if(index === 2){
-						return item > timerArr1[index]
-					}else{
 						return item >= timerArr1[index]
-					}
 				})
 				if(!every){
 					uni.showToast({

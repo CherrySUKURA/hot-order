@@ -2,7 +2,7 @@
 	<view class="orderList container" @click.stop="close()">
 		<top-bar :back="false" :topText="topBarList.topText"></top-bar>
 		<view class="search">
-			<input class="searchInp" v-model="OrderParam.phone" type="number" placeholder="请输入手机号" maxlength="11"  confirm-type="search"  />
+			<input class="searchInp" v-model="OrderParam.phone" type="number" placeholder="请输入手机号/姓名" maxlength="11"  confirm-type="search"  />
 			<view class="searchBtn" @click="search">搜索</view>
 		</view>
 		<top-filter :filterData = 'filterData' @change="change" ref="topFilter"></top-filter>
@@ -78,7 +78,7 @@
 	</view>
 </template>
 
-<script>
+<script> 
 	import topBar from '@/components/top-bar/top-bar.vue'
 	import topFilter from '@/components/top-filter/top-filter.vue'
 	import uniTag from '@/components/uni-tag/uni-tag.vue'
@@ -110,8 +110,6 @@
 				this.OrderParam.startTime = ""
 				this.OrderParam.endTime = ""
 			}
-		},
-		onShow(){
 			this.HttpRequest()
 		},
 		onReachBottom(){

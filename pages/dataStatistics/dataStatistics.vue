@@ -79,7 +79,7 @@
 		components: {
 			topBar
 		},
-		onShow() {
+		onLoad() {
 			this.httpReaquestData()
 		},
 		data() {

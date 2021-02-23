@@ -17,15 +17,14 @@
 					<view class="userstatus">用户身份:{{nickname}}</view>
 				</view>
 				<scroll-view :scroll-y="true" :scroll-top="false" class="list">
-					 <view class="list-content">
-						 <uni-list class="setList" v-if="false">
-						     <uni-list-item v-for="(item,index) in userList" :key="index" :title="item.title" clickable link="navigateTo" :to="item.to" :thumb="item.thumb"
-						      thumb-size="lg"></uni-list-item>
-						 </uni-list>
-						 <view class="button">
-						 	<button class="unLoginBtn" @click="unLoginFun" type="default" plain="true">退出登录</button>
-						 </view>
-					 </view>
+					<view class="list-content">
+						<uni-list class="setList" v-if="false">
+							<uni-list-item v-for="(item,index) in userList" :key="index" :title="item.title" clickable link="navigateTo" :to="item.to" :thumb="item.thumb" thumb-size="lg"></uni-list-item>
+						</uni-list>
+						<view class="button">
+							<button class="unLoginBtn" @click="unLoginFun" type="default" plain="true">退出登录</button>
+						</view>
+					</view>
 				</scroll-view>
 			</view>
 		</uni-drawer>

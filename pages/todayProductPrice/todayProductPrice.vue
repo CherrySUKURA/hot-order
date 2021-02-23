@@ -40,13 +40,13 @@
 			uniLoadMore,
 			topFilter
 		},
-		onShow() {
+		onLoad() {
 			this.HttpRequest()
 		},
 		onReachBottom(){
 			this.page.pageNo++;
 			this.dataStatus = 'loading';
-			this.HttpRequestTodayProductData(this.page)
+			this.HttpRequestTodayProductData(this.page) 
 		},
 		data() {
 			return {
